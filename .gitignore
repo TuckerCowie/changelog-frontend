@@ -1,2 +1,5 @@
 .sass-cache/
 *.css.map
+*.sublime-*
+dist/
+node_modules/
