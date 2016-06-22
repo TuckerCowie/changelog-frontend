@@ -1,6 +1,6 @@
 # Changelog Frontend
 
-By @TuckerCowie for @TheChangelog 2016
+By @tuckercowie for @thechangelog 2016
 
 + [Prerequisites](#prerequisites)
 + [Getting Started](#getting-started)
