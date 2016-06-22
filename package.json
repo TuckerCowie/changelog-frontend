@@ -1,0 +1,26 @@
+{
+  "name": "changelog-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build": "gulp",
+    "postinstall": "npm run build",
+    "start": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://TuckerCowie@github.com/TuckerCowie/changelog-frontend.git"
+  },
+  "author": "Tucker Cowie <tuckercowie@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-open": "^2.0.0",
+    "gulp-pug": "^3.0.3",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

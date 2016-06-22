@@ -1,0 +1,47 @@
+'use strict';
+
+var del = require('del');
+var gulp = require('gulp');
+var livereload = require('gulp-livereload');
+var open = require('gulp-open');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var pug = require('gulp-pug');
+
+var sources = {
+	pug: ['src/views/**/*.pug', '!src/views/partials/*.pug'],
+	sass: 'src/sass/index.sass',
+};
+
+var dist = 'dist';
+
+gulp.task('default', ['sass', 'views']);
+
+gulp.task('clean', function cleanDist() {
+	del(dist);
+});
+
+gulp.task('watch', ['clean', 'default'], function liveReload() {
+	livereload.listen();
+	gulp.watch(sources.pug, ['views']);
+	gulp.watch(sources.sass, ['sass']);
+	gulp.src(dist + '/index.html').pipe(open());
+});
+
+gulp.task('views', function buildHTML() {
+	return gulp.src(sources.pug)
+	.pipe(pug({
+		pretty: true,
+	}))
+	.pipe(gulp.dest(dist))
+	.pipe(livereload());
+});
+
+gulp.task('sass', function buildCSS() {
+	return gulp.src(sources.sass)
+	.pipe(sourcemaps.init())
+		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	.pipe(sourcemaps.write('./'))
+	.pipe(gulp.dest(dist))
+	.pipe(livereload());
+});
