@@ -3,7 +3,6 @@
 var del = require('del');
 var gulp = require('gulp');
 var livereload = require('gulp-livereload');
-var open = require('gulp-open');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var pug = require('gulp-pug');
@@ -25,7 +24,7 @@ gulp.task('watch', ['clean', 'default'], function liveReload() {
 	livereload.listen();
 	gulp.watch(sources.pug, ['views']);
 	gulp.watch(sources.sass, ['sass']);
-	gulp.src(dist + '/index.html').pipe(open());
+	gulp.src(dist + '/index.html');
 });
 
 gulp.task('views', function buildHTML() {
