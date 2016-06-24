@@ -8,7 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var pug = require('gulp-pug');
 
 var sources = {
-	pug: ['src/views/**/*.pug', '!src/views/partials/*.pug'],
+	pug: ['src/views/**/*.pug', '!src/views/{partials,templates}/*.pug'],
 	sass: 'src/sass/index.sass',
 };
 
