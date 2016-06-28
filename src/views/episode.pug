@@ -1,0 +1,134 @@
+extends ./templates/wrapper.pug
+
+block title
+	title #201 Why SQLite Succeeded as a Database
+	// Be sure to add meta tags here
+	meta(name="description", content="")
+
+block content
+	article
+		header
+			img(src="http://placehold.it/180", alt="The Changelog Podcast")/
+			h2
+				b Why SQLite Succeeded as a Database
+				br/
+				i with <a href="#" target="_blank">Richard Hipp</a>, the creator of <a href="#" target="_blank">SQLite</a>
+			div
+				// HTML5 Semantics Recommendation <h3>Speakers</h3>
+				ul
+					li
+						a(href="#")
+							img(src="http://placehold.it/75", alt="Adam Stacoviak")/
+							| Adam Stacoviak
+					li
+						a(href="#")
+							img(src="http://placehold.it/75", alt="Jerod Santo")/
+							| Jerod Santo
+					li
+						a(href="#", target="_blank")
+							img(src="http://placehold.it/75", alt="Richard Hipp")/
+							| Richard Hipp
+			nav
+				button
+					img(src="http://placehold.it/24", alt="Play podcast graphic")/
+					| Play
+				a(href="#")
+					img(src="http://placehold.it/24", alt="Subscribe to podcast graphic")/
+					| Subscribe
+				a(href="#")
+					img(src="http://placehold.it/24", alt="Share podcast graphic")/
+					| Share
+				a(href="#")
+					img(src="http://placehold.it/24", alt="Sponsor podcast graphic")/
+					| Sponsor
+				button
+					img(src="http://placehold.it/24", alt="More options")/
+			aside
+				p Brought to you by:
+				ul
+					li
+						a(href="#")
+							img(src="http://placehold.it/100x42", alt="toptal")/
+					li
+						a(href="#")
+							img(src="http://placehold.it/100x42", alt="Digital Ocean")/
+		p This week we talked to Richard Hipp, the creator of SQLite, about its history, where it came from, why is succeeded as a database, how its development is sustainably funded, and how it's the most widely deployed database engine in the world.
+		cite
+			b Episode #201
+			| /
+			time(datetime="2016-04-29T12:00") APR 29 2016
+			| / 83 Min
+			wbr
+			a(href="#", download)
+				img(src="http://placehold.it/32", alt="Download MP3 (54MB)")
+				| Download MP3 (54MB)
+		footer
+			div
+				section
+					div
+						img(src="http://placehold.it/25", alt="Show notes")
+					div
+						h3 Show notes
+						ul
+							//- Repeats
+							li
+								a(href="#", target="_blank") The homepage of Richard Hipp
+				section
+					div
+						img(src="http://placehold.it/25", alt="Show sponsors")
+					div
+						h3 Show sponsors
+						dl
+							dt
+								a(href="#", target="_blank") Toptal
+							dd Join the best, or hire the best engineers and designers!
+
+			a(href="#")
+				| View all episodes
+	section
+		header
+			img(src="http://placehold.it/80", alt="News")
+			h2 News
+		article
+			h3 Changelog Weekly
+			p <em>Every Saturday morning</em> we ship an email that covers everything that hits our open source radar. It's nerd to the core. Don't miss out. No spam!
+			nav
+				a(href="#")
+					img(src="http://placehold.it/25", alt="Subscribe")
+					| Subscribe
+				a(href="#")
+					img(src="http://placehold.it/25", alt="Details")
+					| Details
+		article
+			h3 Changelog Nightly
+			p <em>Every night at 10pm CST</em> we ship an email that unearths the hottest new repos on GitHub before they blow up. It's nerd to the core. Don't miss out. No spam!
+			nav
+				a(href="#")
+					img(src="http://placehold.it/25", alt="Subscribe")
+					| Subscribe
+				a(href="#")
+					img(src="http://placehold.it/25", alt="Details")
+					| Details
+	aside
+		img(src="http://placehold.it/60", alt="Changelog Logo")
+		div
+			h2 Become a Changelog member today!
+			p Get backstage passes to everything we do: Access to our private Slack, exclusive discounts, our limited yearly tee, and more.
+		a(href="#") Join now
+	section
+		header
+			img(src="http://placehold.it/80", alt="News")
+			h2 Films
+			p Changelog films is our little film studio that focuses on telling developer-centric stories that need to be heard.
+		article
+			header
+				h3 Beyond Code: Season 2 / Space City Js 2015
+				time(datetime="2016-01-01T12:00") Jan 2016
+			video(poster="http://placehold.it/960x540", controls)
+				source(src="#", type="video/webm")
+				source(src="#", type="video/mp4")
+				source(src="#", type="video/ogg")
+				| Your browser does not support HTML5 video
+			footer
+				a(href="#") Hire us
+				a(href="#") View more films
