@@ -1,4 +1,5 @@
 div
+	// HTML5 Semantics Recommendation <h2>Site Navigation</h2>
 	div
 		a(href="#")
 			img(src="http://placehold.it/180x55", alt="The Changelog")
@@ -7,21 +8,20 @@ div
 	aside
 		header
 			img(src="http://placehold.it/118", alt="The Changelog")
-			h1 Changelog
+			h3(role="presentation") Changelog
 		p The Changelog is a member supported blog, weekly newsletter and podcast that covers the intersection of software development and open source. Open source moves fast. Keep up.
 	nav
-		//- h1 Site Navigation
 		section
 			header
 				img(src="http://placehold.it/36", alt="Changelog news graphic")
-				h1 News
+				h3 News
 			a(href="#") Weekly
 			a(href="#") Nightly
-			a(href="#") Subcscribe
+			a(href="#") Subscribe
 		section
 			header
 				img(src="http://placehold.it/36", alt="Changelog podcasts graphic")
-				h1 Podcasts
+				h3 Podcasts
 			a(href="#") The Changelog
 			a(href="#") Go Time
 			a(href="#") Founders Talk
@@ -30,13 +30,13 @@ div
 		section
 			header
 				img(src="http://placehold.it/36", alt="Changelog films graphic")
-				h1 Films
+				h3 Films
 			a(href="#") Featured
 			a(href="#") All films
 			a(href="#") Subscribe
 	nav
 		header
-			h1 More Info
+			h3 More Info
 		a(href="#") Advertise
 		a(href="#") Membership
 		a(href="#") Partnership

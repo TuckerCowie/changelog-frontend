@@ -7,46 +7,50 @@ block title
 
 block content
 	section
-		//- h1 Featured Quotes
+		// HTML5 Semantics Recommendation <h2>Featured Quotes</h2>
+		//- Repeats
 		article
 			q I train a computer like I train a dog.
 			p -Matz
 				sup Creator of the Ruby Programming Language
 			header
 				button
-					img(src="http://placehold.it/55x65", alt="Show previous featured quote")
+					img(src="http://placehold.it/55x65", alt="Show previous featured quote")/
 				div
-					h1 The Changelog #202
-					h2 23 years of Ruby with Matz
+					h2 
+						span The Changelog #202
+						br/
+						b 23 years of Ruby with Matz
 				button
-					img(src="http://placehold.it/55x65", alt="Show next featured quote")
-			footer
-				a(href="#")
-					img(src="http://placehold.it/18", alt="Play podcast graphic")
+					img(src="http://placehold.it/55x65", alt="Show next featured quote")/
+			nav
+				button
+					img(src="http://placehold.it/18", alt="Play podcast graphic")/
 					| Play
 				a(href="#")
-					img(src="http://placehold.it/18", alt="Subscribe to podcast graphic")
+					img(src="http://placehold.it/18", alt="Subscribe to podcast graphic")/
 					| Subscribe
 				a(href="#")
-					img(src="http://placehold.it/18", alt="Share podcast graphic")
+					img(src="http://placehold.it/18", alt="Share podcast graphic")/
 					| Share
 				a(href="#")
-					img(src="http://placehold.it/18", alt="Sponsor podcast graphic")
+					img(src="http://placehold.it/18", alt="Sponsor podcast graphic")/
 					| Sponsor
 	section
-		//- h1 Podcast Shows
+		// HTML5 Semantics Recommendation <h2>Podcast Shows</h2>
+		//- Repeats
 		article
 			div
-				img(src="http://placehold.it/170", alt="The Changelog podcast art")
+				img(src="http://placehold.it/170", alt="The Changelog podcast art")/
 				button
-					img(src="http://placehold.it/40", alt="Show podcast show menu")
+					img(src="http://placehold.it/40", alt="Show podcast show menu")/
 				header
-					h1 The Changelog
+					h2 The Changelog
 					nav
-						//- Podcast Menu
+						// HTML5 Semantics Recommendation <h5>Podcast Menu</h5>
 						a(href="#") Play latest episode
 						a(href="#") Latest Episode Page
 						a(href="#") Go to show page
 						a(href="#") Subscribe
 					button
-						img(src="http://placehold.it/40", alt="Hide podcast show Menu")
+						img(src="http://placehold.it/40", alt="Hide podcast show Menu")/
