@@ -1,0 +1,93 @@
+extends ./templates/wrapper.pug
+
+block title
+	title The Changelog Podcast
+	// Be sure to add meta tags here
+	meta(name="description", content="")
+
+block content
+	section
+		header
+			h2
+				img(src="http://placehold.it/180", alt="The Changelog Podcast")/
+			p A weekly show that shines a spotlight on the intersection of open source and software development. It's about the code, the people, and the community
+			nav
+				button
+					img(src="http://placehold.it/18", alt="Play podcast graphic")/
+					| Play
+				a(href="#")
+					img(src="http://placehold.it/18", alt="Subscribe to podcast graphic")/
+					| Subscribe
+				a(href="#")
+					img(src="http://placehold.it/18", alt="Share podcast graphic")/
+					| Share
+				a(href="#")
+					img(src="http://placehold.it/18", alt="Sponsor podcast graphic")/
+					| Sponsor
+			div
+				i This show records on Wednesday and airs on Friday with hosts:
+				ul
+					li
+						a(href="#")
+							img(src="http://placehold.it/42", alt="Adam Stacoviak")/
+							| Adam Stacoviak
+					li
+						a(href="#")
+							img(src="http://placehold.it/42", alt="Jerod Santo")/
+							| Jerod Santo
+			aside
+				p Brought to you by:
+				ul
+					li
+						a(href="#", target="_blank")
+							img(src="http://placehold.it/100x42", alt="toptal")/
+					li
+						a(href="#", target="_blank")
+							img(src="http://placehold.it/100x42", alt="Digital Ocean")/
+		article
+			h3 The Latest
+			div
+				q "It took 6 months for a simple hello world."
+				button
+					img(src="http://placehold.it/75", alt="Play episode")/
+					| Play
+				cite
+					b 23 years of Ruby with Matz
+					span #202
+		//- Repeats
+		article
+			time(datetime="2016-05-16T12:00") May 6 2016
+			h3 
+				span #202
+				| &nbsp;
+				b 23 years of Ruby with Matz
+			div
+				p Big show this week — we caught up with Matz, the creator of Ruby, to discuss the origins of the Ruby programming language, its history and future, Ruby 3.0, Concurrency and Parallelism, Streem, Erlang, Elixir, and more.
+				img(src="http://placehold.it/75", alt="Guest Speaker: Matz")/
+			nav
+				button
+					img(src="http://placehold.it/30", alt="Play podcast")/
+					| Play
+				a(href="#")
+					img(src="http://placehold.it/30", alt="View details")/
+					| Details
+				button
+					img(src="http://placehold.it/30", alt="More options")/
+				nav
+					div
+						span
+					div
+						a(href="#") Subscribe
+						a(href="#") Share episode
+						button Copy episode link
+						a(href="#") Sponsor this podcast
+		aside
+			// HTML5 Semantics Recommendation if join now is a site wide callout, h2 should stay; if join now refers to only this podcast show, it should be demoted to h3
+			h2 Join the member community
+			p Get backstage passes to everything we do:
+				br/
+				| Access to our private Slack, exclusive discounts, our limited yearly tee, and more.
+			a(href="#") Join Now
+		button
+			img(src="http://placehold.it/25x15", alt="Show all episodes")/
+			| Show all episodes
