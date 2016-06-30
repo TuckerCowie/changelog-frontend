@@ -8,8 +8,9 @@ var sourcemaps = require('gulp-sourcemaps');
 var pug = require('gulp-pug');
 
 var sources = {
-	pug: ['src/views/**/*.pug', '!src/views/{partials,templates}/*.pug'],
-	sass: 'src/sass/index.sass',
+	views: ['src/views/**/*.pug', '!src/views/{partials,templates}/*.pug'],
+	pug: ['src/views/**/*.pug'],
+	sass: 'src/sass/**/*.sass',
 };
 
 var dist = 'dist';
@@ -28,7 +29,7 @@ gulp.task('watch', ['clean', 'default'], function liveReload() {
 });
 
 gulp.task('views', function buildHTML() {
-	return gulp.src(sources.pug)
+	return gulp.src(sources.views)
 	.pipe(pug({
 		pretty: true,
 	}))
