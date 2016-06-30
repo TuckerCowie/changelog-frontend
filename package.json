@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gulp",
     "postinstall": "npm run build",
-    "start": "gulp watch"
+    "start": "gulp watch",
+    "deploy": "npm run build && rsync -arvuz dist/ jerodsanto@159.203.131.79:~/peek"
   },
   "repository": {
     "type": "git",
