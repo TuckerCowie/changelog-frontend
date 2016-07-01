@@ -1,14 +1,68 @@
-div
-	a(href="/")
+div.navigation-bar
+	a.navigation-bar_logo(href="/")
 		h1
 			img(src="http://placehold.it/180x55", alt="The Changelog")
-	nav
+	nav.navigation-bar_links
 		h2.accessibility-hidden Quick Links
-		a(href="#") Podcasts
-		a(href="#") News
-		a(href="#") Videos
-		a(href="#") Advertise
-	button
+		a.navigation-bar-link(href="#") Podcasts
+		// For open state, use .navigation-bar-link--is-open
+		div.navigation-bar-link
+			a(href="#") News
+			div.navigation-bar-link_dropdown
+				nav.navigation-bar-dropdown
+					a(href="#") Weekly
+					a(href="#") Nightly
+					a(href="#") Subscribe
+		a.navigation-bar-link(href="#") Videos
+		a.navigation-bar-link(href="#") Advertise
+	button.navigation-bar_menu-button
 		img(src="http://placehold.it/55", alt="Show site navigation menu")
-	
-	include ./navigation-tray.pug
+
+	// For open state, use .navigation-bar_tray--is-open
+	div.navigation-bar_tray
+		div.navigation-tray
+			h2.accessibility-hidden Site Navigation
+			div.navigation-bar
+				a(href="#").navigation-tray_logo.navigation-bar_logo
+					img(src="http://placehold.it/180x55", alt="The Changelog")
+				button.navigation-bar_menu-button
+					img(src="http://placehold.it/55", alt="Hide site navigation menu")
+			div.navigation-tray_content
+				div.navigation-tray_content_sections
+					aside.navigation-tray-section.navigation-tray-section--aside
+						header
+							img(src="http://placehold.it/248", alt="The Changelog")
+							h3(role="presentation") Changelog
+						p The Changelog is a member supported blog, weekly newsletter and podcast that covers the intersection of software development and open source. Open source moves fast. Keep up.
+					nav.navigation-tray-section
+						header
+							img(src="http://placehold.it/140", alt="Changelog news graphic")
+							h3 News
+						a(href="#") Weekly
+						a(href="#") Nightly
+						a(href="#") Subscribe
+					nav.navigation-tray-section
+						header
+							img(src="http://placehold.it/140", alt="Changelog podcasts graphic")
+							h3 Podcasts
+						a(href="#") The Changelog
+						a(href="#") Go Time
+						a(href="#") Founders Talk
+						a(href="#") Backstage
+						a(href="#") Polyglot
+					nav.navigation-tray-section
+						header
+							img(src="http://placehold.it/140", alt="Changelog films graphic")
+							h3 Films
+						a(href="#") Featured
+						a(href="#") All films
+						a(href="#") Subscribe
+				nav.navigation-tray-side-nav
+					h3.navigation-tray-side-nav_heading More Info
+					a(href="#") Advertise
+					a(href="#") Membership
+					a(href="#") Partnership
+					a(href="#") Store
+					a(href="#") About
+					a(href="#") Team
+					a(href="#") Contact
