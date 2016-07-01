@@ -1,0 +1,96 @@
+.featured-podcast
+    text-align: center
+
+    &:before
+        @media (min-width: $smartphone)
+            content: ''
+            position: absolute
+            width: 100%
+            left: 0
+            right: 0
+            height: 10rem
+            top: 30%
+            background-image: url(http://placehold.it/512)
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: contain
+
+        @media (min-width: $tablet)
+            height: 66%
+            top: 15%
+
+
+    &_content
+        position: relative
+        padding: $padding-extra-large 0
+
+        @media (min-width: $tablet)
+            padding: $padding-extra-large * 3 0 $padding-extra-large 0
+
+        & > q
+            @media (min-width: $tablet)
+                font-size: 2.85em
+
+            & + cite
+                @media (min-width: $tablet)
+                    font-size: 1.15em
+
+                & > sup
+                    color: $gray-light
+
+                    @media (min-width: $tablet)
+                        display: inline-block
+                        margin-left: 0.5rem
+
+    &_navigation
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+
+        & > button
+            max-width: 3.2rem
+            max-height: 3.2rem
+
+        & > h3
+            font-size: 1em
+            flex: 1 0 auto
+            font-weight: 800
+            z-index: 1
+
+            @media (min-width: $tablet)
+                font-size: 1.25em
+
+            & > span
+                @extend %navigation-link
+                color: $gray-light
+                font-weight: 400
+                font-size: 0.85em
+                display: block
+
+    &_footer
+        margin-top: $padding-extra-large
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        @media (min-width: $tablet)
+            margin-top: 0
+
+        & > *
+            z-index: 1
+
+        & > aside
+            display: none
+
+            & > h4
+                @extend %navigation-link
+                color: $gray-light
+                font-size: 0.85em
+
+            & > a
+                margin: 0 1rem
+
+            @media (min-width: $tablet)
+                display: block
+                margin: $padding-extra-large 0 $padding-extra-large * 2 0

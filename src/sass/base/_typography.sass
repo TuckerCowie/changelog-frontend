@@ -1,11 +1,41 @@
 body
     font-size: $root-font-size
+    font-family: $content
     color: $black
 
 a
     text-decoration: none
 
+q
+    font-size: 1.7em
+    font-family: $content
+    font-weight: 800
+    text-align: center
+
+    &:before
+        content: '“'
+    
+    &:after
+        content: '”'
+
+    & + cite
+        font-size: 1em
+        display: block
+        font-weight: 600
+        font-style: normal
+        line-height: 2
+        margin-top: 1rem
+
+        & > sup
+            font-weight: 400
+            font-style: italic
+            display: block
+            top: 0
+            font-size: 0.85em
+            line-height: 1.5
+            vertical-align: baseline
+
 %navigation-link
     text-transform: uppercase
     font-family: $display
-    font-weight: 400
+    font-weight: 500
