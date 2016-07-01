@@ -29,7 +29,7 @@ gulp.task('watch', ['clean', 'default'], function liveReload() {
 });
 
 gulp.task('views', function buildHTML() {
-	return gulp.src(sources.views)
+	gulp.src(sources.views)
 	.pipe(pug({
 		pretty: true,
 	}))
@@ -38,7 +38,7 @@ gulp.task('views', function buildHTML() {
 });
 
 gulp.task('sass', function buildCSS() {
-	return gulp.src(sources.sass)
+	gulp.src(sources.sass)
 	.pipe(sourcemaps.init())
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 	.pipe(sourcemaps.write('./'))
