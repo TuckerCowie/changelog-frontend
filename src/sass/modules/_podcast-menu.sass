@@ -1,0 +1,19 @@
+.podcast-menu
+    display: flex
+    background: $black
+    border-top: 1px solid $green
+    overflow: auto
+    max-width: 100%
+
+    & > a, & > button
+        @extend %navigation-link
+        flex: 0 0 auto
+        color: $gray-light
+        padding: 1.15rem
+        display: flex
+
+        &:hover
+            color: $white
+
+        & > img
+            margin-right: 1rem
