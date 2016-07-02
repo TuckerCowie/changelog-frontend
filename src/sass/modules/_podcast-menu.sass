@@ -4,13 +4,28 @@
     border-top: 1px solid $green
     overflow: auto
     max-width: 100%
+    align-items: center
+
+    &--episode
+        margin-top: 1rem
+        width: 100%
+        background: transparent
+        overflow: visible
+
+        & > a, & > button
+            padding-left: 1rem !important
+
+        & > a:hover, & > button:hover
+            color: $black !important
 
     & > a, & > button
-        @extend %navigation-link
+        @extend %display-font
+        position: relative
         flex: 0 0 auto
         color: $gray-light
         padding: 1.15rem
         display: flex
+        align-items: center
 
         @media (min-width: $tablet)
             padding: 1.15rem 1.75rem
@@ -20,3 +35,10 @@
 
         & > img
             margin-right: 1rem
+
+    &_tooltip
+        display: none
+        position: absolute
+
+        &--is-open
+            display: block
