@@ -1,0 +1,24 @@
+.show-header
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+
+    & > h2
+        @media (min-width: $tablet)
+            margin-top: $padding-extra-large * 1.5
+
+    & > p
+        max-width: 36rem
+        margin-top: 0
+        padding: 0 $padding-large
+
+    &_hosts
+        margin: $padding-large 0
+
+        @media (min-width: $tablet)
+            margin: $padding-large 0 $padding-extra-large 0
+
+        & > i
+            @media (min-width: $tablet)
+                color: $gray-light

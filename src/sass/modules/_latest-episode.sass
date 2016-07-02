@@ -1,0 +1,52 @@
+.latest-episode
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    padding: 0 $padding-extra-large $padding-extra-large $padding-extra-large
+
+    & > h3
+        @extend %display-font
+        color: $gray-light
+        margin: $padding-large * 1.5 0
+
+        @media (min-width: $tablet)
+            margin: $padding-extra-large * 1.5 0
+
+    & > q 
+        font-size: 1.75em
+
+    & > button
+        flex: 0 0 auto
+        display: block
+        position: relative
+        @extend %display-font
+        margin: $padding-large
+
+        @media (min-width: $tablet)
+            margin: $padding-extra-large
+
+        &:before
+            content: ''
+            position: absolute
+            top: 50%
+            margin-top: -9rem
+            left: 50%
+            margin-left: -9rem
+            height: 18rem
+            width: 18rem
+            z-index: -1
+            background-image: url(http://placehold.it/290)
+
+        & > img
+            display: block
+
+    & > cite
+        font-size: 1.15em
+        font-weight: 800
+        font-style: normal
+
+        & > span
+            display: block
+            @extend %display-font
+            color: $gray-light
