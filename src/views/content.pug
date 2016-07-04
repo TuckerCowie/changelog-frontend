@@ -6,46 +6,50 @@ block title
 	meta(name="description", content="")
 
 block content
-	article
-		header
-			img(src="http://placehold.it/180", alt="The Changelog Logo")/
-			h2
-				b Content Page
-			time(datetime="2016-04-29T12:00") APR 29 2016
-			div
-				// HTML5 Semantics Recommendation <h3>Authors</h3>
-				ul
-					li
-						a(href="#")
-							img(src="http://placehold.it/75", alt="Adam Stacoviak")/
-							| Adam Stacoviak
-					li
-						a(href="#")
-							img(src="http://placehold.it/75", alt="Jerod Santo")/
-							| Jerod Santo
-		p This week we talked to Richard Hipp, the creator of SQLite, about its history, where it came from, why is succeeded as a database, how its development is sustainably funded, and how it's the most widely deployed database engine in the world.
-		p Where it came from, why is succeeded as a database, how its development is sustainably funded, and how it's the most widely deployed database engine in the world.
-		dl
-			dt Term A
-			dd A definition of `Term A`
-			dt Term B
-			dd A definition of `Term B`
-		p Talked to Richard Hipp, the creator of SQLite, about its history, where it came from, why is succeeded as a database deployed database engine in the world.
-		h3 Subsection
-		p We talked to and how it's the most widely deployed database engine in the world.
-		ul
-			li Unordered Item
-			li Unordered Item
-			li Unordered Item
-		ol
-			li Unordered Item
-			li Unordered Item
-			li Unordered Item
-		p Richard Hipp, the creator of SQLite, succeeded as a database, how its development is sustainably funded, and how it's the most widely deployed database engine in the world.
-		p SQLite, about its history, where it came from, why is succeeded as a database, 's the most widely deployed database engine in the world.
-	aside
-		img(src="http://placehold.it/60", alt="Changelog Logo")
-		div
-			h2 Become a Changelog member today!
-			p Get backstage passes to everything we do: Access to our private Slack, exclusive discounts, our limited yearly tee, and more.
-		a(href="#") Join now
+	article.section
+		div.container.container--has-padding.container--skinny
+			header
+				h2.h2
+					img(src="http://placehold.it/180", alt="The Changelog Logo")/
+					br/
+					| Content Page
+				p.description
+					time(datetime="2016-04-29T12:00") Apr 29 2016
+				div.hosts-list
+					a.hosts-list_item(href="#")
+						img(src="http://placehold.it/75", alt="Adam Stacoviak")/
+						| Adam Stacoviak
+					a.hosts-list_item(href="#")
+						img(src="http://placehold.it/75", alt="Jerod Santo")/
+						| Jerod Santo
+			p This week we talked to Richard Hipp, the creator of SQLite, about its history, where it came from, why is succeeded as a database, how its development is sustainably funded, and how it's the most widely deployed database engine in the world.
+			p Where it came from, why is succeeded as a database, how its development is sustainably funded, and how it's the most widely deployed database engine in the world.
+			dl.sponsors-list
+				div.sponsors-list_item
+					dt.sponsors-list_name Term A
+					dd.sponsors-list_description A definition of `Term A`
+				div.sponsors-list_item
+					dt.sponsors-list_name Term B
+					dd.sponsors-list_description A definition of `Term B`
+			p Talked to Richard Hipp, the creator of SQLite, about its history, where it came from, why is succeeded as a database deployed database engine in the world.
+		div.container.section
+			div.mosiac.mosiac--blue
+				aside.callout.callout--horizontal
+					img(src="http://placehold.it/60", alt="Changelog Logo")
+					div.callout_content
+						h2 Become a Changelog member today!
+						p Get backstage passes to everything we do: Access to our private Slack, exclusive discounts, our limited yearly tee, and more.
+					a.btn.btn--blue-text(href="#") Join now
+		div.container.container--has-padding.container--skinny
+			h3 Subsection
+			p We talked to and how it's the most widely deployed database engine in the world.
+			ul
+				li Unordered Item
+				li Unordered Item
+				li Unordered Item
+			ol
+				li Unordered Item
+				li Unordered Item
+				li Unordered Item
+			p Richard Hipp, the creator of SQLite, succeeded as a database, how its development is sustainably funded, and how it's the most widely deployed database engine in the world.
+			p SQLite, about its history, where it came from, why is succeeded as a database, 's the most widely deployed database engine in the world.

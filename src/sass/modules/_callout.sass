@@ -1,18 +1,25 @@
 .callout
-    margin: $padding-extra-large 0
+    text-align: center
+    padding: 2rem
 
     & > h2
         @extend %display-font
         color: $green
+        margin: 0 0 $padding-small 0
+        font-size: 2.75em
 
-    &--large
-        padding: 1rem
-        text-align: center
+    & p
+        color: $white
 
+    &_content
+        padding: 0 1rem
+
+    &--horizontal
         @media (min-width: $tablet)
-            padding: $padding-extra-large * 2
+            display: flex
+            align-items: center
+            text-align: left
+            justify-content: space-between
 
-
-        & > h2
-            margin: $padding-small 0
-            font-size: 2.75em
+            & h2, & p
+                margin: 0

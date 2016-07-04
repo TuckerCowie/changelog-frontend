@@ -1,5 +1,23 @@
 .mosiac
-    background-image: linear-gradient(rgba(0,0,0,0.66), rgba(0,0,0,0.66)),url(http://placehold.it/720);
-    background-size: cover;
-    background-position: center center;
+    position: relative
     color: $white
+
+    &:before
+        content: ''
+        position: absolute
+        z-index: -1
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-image: linear-gradient(rgba(0,0,0,0.66), rgba(0,0,0,0.66)),url(http://placehold.it/720);
+        background-size: cover;
+        background-position: center center;
+
+    &--blue:before
+        background-image: linear-gradient(rgba($blue, 0.85), rgba($blue, 0.85)),url(http://placehold.it/720);
+
+    &--overlap
+        color: inherit
+        &:before
+            height: 8rem

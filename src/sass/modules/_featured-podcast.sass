@@ -1,25 +1,6 @@
 .featured-podcast
     text-align: center
 
-    &:before
-        @media (min-width: $smartphone)
-            content: ''
-            position: absolute
-            width: 100%
-            left: 0
-            right: 0
-            height: 10rem
-            top: 30%
-            background-image: url(http://placehold.it/512)
-            background-repeat: no-repeat
-            background-position: center center
-            background-size: contain
-
-        @media (min-width: $tablet)
-            height: 66%
-            top: 15%
-
-
     &_content
         position: relative
         padding: $padding-extra-large 0
@@ -36,7 +17,7 @@
                     font-size: 1.15em
 
                 & > sup
-                    color: $gray-light
+                    color: $gray
 
                     @media (min-width: $tablet)
                         display: inline-block
@@ -63,7 +44,7 @@
 
             & > span
                 @extend %display-font
-                color: $gray-light
+                color: $gray
                 font-weight: 400
                 font-size: 0.85em
                 display: block
@@ -85,7 +66,7 @@
 
             & > h4
                 @extend %display-font
-                color: $gray-light
+                color: $half-white
                 font-size: 0.85em
                 margin-top: 0
 
