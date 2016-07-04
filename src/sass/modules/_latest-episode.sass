@@ -1,30 +1,20 @@
 .latest-episode
-    display: flex
-    flex-direction: column
-    align-items: center
     text-align: center
-    padding: 0 $padding-extra-large $padding-extra-large $padding-extra-large
 
     & > h3
+        font-size: 1.25em
         @extend %display-font
-        color: $gray-light
-        margin: $padding-large * 1.5 0
-
-        @media (min-width: $tablet)
-            margin: $padding-extra-large * 1.5 0
+        color: $half-black
 
     & > q 
-        font-size: 1.75em
+        font-size: 2.25em
+        margin: 2rem 0
 
     & > button
         flex: 0 0 auto
         display: block
         position: relative
         @extend %display-font
-        margin: $padding-large
-
-        @media (min-width: $tablet)
-            margin: $padding-extra-large
 
         &:before
             content: ''
@@ -42,11 +32,12 @@
             display: block
 
     & > cite
-        font-size: 1.15em
+        font-size: 1.75em
         font-weight: 800
         font-style: normal
+        margin: 2rem 0
 
         & > span
             display: block
             @extend %display-font
-            color: $gray-light
+            color: $half-black
