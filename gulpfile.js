@@ -17,7 +17,7 @@ var sources = {
 
 var dist = 'dist';
 
-gulp.task('default', ['sass', 'views']);
+gulp.task('default', ['sass', 'views', 'images']);
 
 gulp.task('clean', function cleanDist() {
 	del(dist);
