@@ -6,11 +6,13 @@ var livereload = require('gulp-livereload');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var pug = require('gulp-pug');
+var imagemin = require('gulp-imagemin');
 
 var sources = {
 	views: ['src/views/**/*.pug', '!src/views/{partials,templates}/*.pug'],
 	pug: ['src/views/**/*.pug'],
 	sass: 'src/sass/**/*.sass',
+	images: 'assets/img/**/*.{svg,png,jpg}',
 };
 
 var dist = 'dist';
@@ -44,4 +46,10 @@ gulp.task('sass', function buildCSS() {
 	.pipe(sourcemaps.write('./'))
 	.pipe(gulp.dest(dist))
 	.pipe(livereload());
+});
+
+gulp.task('images', function compressImages() {
+	gulp.src(sources.images)
+	.pipe(imagemin())
+	.pipe(gulp.dest(dist + '/img'));
 });
