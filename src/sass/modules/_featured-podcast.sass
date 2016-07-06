@@ -30,8 +30,14 @@
 
 
         & > button
-            max-width: 3.2rem
-            max-height: 3.2rem
+            width: 3.2rem
+            height: 3.2rem
+
+            & > img
+                height: 2.5rem
+
+                @media (min-width: $tablet)
+                    height: 3.5rem
 
         & > h3
             font-size: 1em
@@ -72,6 +78,9 @@
 
             & > a
                 margin: 0 1rem
+
+            & img
+                height: 1.5rem
 
             @media (min-width: $tablet)
                 display: block

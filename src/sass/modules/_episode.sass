@@ -16,6 +16,13 @@
 
     &_header
         max-width: 100%
+
+        & > img
+            width: 12.5rem
+
+            @media (min-width: $tablet)
+                width: 15.5rem
+
         & > h2
             font-size: 2em
 
@@ -41,11 +48,20 @@
             display: flex
             justify-content: center
 
+            @media (min-width: $tablet)
+                margin-left: 1rem
+
+            & > img
+                height: 1.25rem
+                width: 1.25rem
+                padding: 0 0.5rem
+
     &_footer
         font-size: 1.15em
         width: 100%
         border-top: 1px solid $border-color
         text-align: left
+
         @media (min-width: $tablet)
             background-image: url(img/abstract-circle.svg)
             background-position: center 2rem

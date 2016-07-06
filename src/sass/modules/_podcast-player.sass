@@ -1,10 +1,14 @@
 .podcast-player
+    display: none
     color: $white
     margin: 0
     background: rgba($black, 0.9)
 
-    @media (min-width: $tablet)
-        display: flex
+    &--is-active
+        display: block
+
+        @media (min-width: $tablet)
+            display: flex
 
     button
         @extend %display-font
@@ -64,6 +68,10 @@
                 color: $white
                 font-weight: 300
                 padding: 1rem
+
+                & > img
+                    height: 3.85rem
+                    width: 3.85rem
 
                 @media (min-width: $tablet)
                     padding: 0 1rem

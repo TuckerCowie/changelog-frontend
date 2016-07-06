@@ -14,7 +14,6 @@
 
         & > a, & > button
             color: $half-black !important
-            padding-left: 0rem !important
 
         & > a:hover, & > button:hover
             color: $black !important
@@ -29,13 +28,15 @@
         align-items: center
 
         @media (min-width: $tablet)
-            padding: 1.15rem 1.75rem
+            padding: 1.15rem 0 1.15rem 1.75rem
 
         &:hover
             color: $white
 
         & > img
             margin-right: 1rem
+            width: 1.25rem
+            height: 1.25rem
 
     &_tooltip
         display: none
