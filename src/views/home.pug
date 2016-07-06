@@ -17,40 +17,128 @@ block content
 						sup Creator of the Ruby Programming Language
 				div.featured-podcast_navigation
 					button
-						img(src="http://placehold.it/55x65", alt="Show previous featured quote")/
+						img(src="img/arrow-side.svg", alt="Show previous featured quote")/
 					h3
 						span The Changelog #202
 						| 23 years of Ruby with Matz
 					button
-						img(src="http://placehold.it/55x65", alt="Show next featured quote")/
+						img.flip-horizontal(src="img/arrow-side.svg", alt="Show next featured quote")/
 				div.featured-podcast_footer
 					nav.podcast-menu
 						button
-							img(src="http://placehold.it/18", alt="Play podcast graphic")/
+							img(src="img/play.svg", alt="Play podcast graphic")/
 							| Play
 						a(href="#")
-							img(src="http://placehold.it/18", alt="Subscribe to podcast graphic")/
+							img(src="img/subscribe.svg", alt="Subscribe to podcast graphic")/
 							| Subscribe
 						a(href="#")
-							img(src="http://placehold.it/18", alt="Share podcast graphic")/
+							img(src="img/share.svg", alt="Share podcast graphic")/
 							| Share
 						a(href="#")
-							img(src="http://placehold.it/18", alt="Sponsor podcast graphic")/
+							img(src="img/sponsor.svg", alt="Sponsor podcast graphic")/
 							| Sponsor
 						button
-							img(src="http://placehold.it/18", alt="Play podcast graphic")/
+							img(src="img/more.svg", alt="More podcast options graphic")/
 					aside
 						h4 Brought to you by:
-						a(href="", target="_blank")
-							img(src="http://placehold.it/155x30")
-						a(href="", target="_blank")
-							img(src="http://placehold.it/155x30")
+						a(href="#", target="_blank")
+							img(src="img/toptal-logo.svg", alt="Toptal logo")
+						a(href="#", target="_blank")
+							img(src="img/digital-ocean-logo.svg", alt="DigitalOcean logo")
 	section#shows.container
 		h2.accessibility-hidden Podcast Shows
 		//- Repeats
 		article.show-summary
 			div.show-summary_art
-				div.show-summary-widget
+				div.show-summary-widget.show-summary-widget--changelog
+					div.show-summary-widget_content
+						// For open state, use .show-summary-widget_menu--is-open
+						div.show-summary-widget_menu
+							div.tooltip
+								h3.tooltip_heading The Changelog
+								nav.tooltip_links
+									h4.accessibility-hidden Podcast Menu
+									a(href="#") Play latest episode
+									a(href="#") Latest Episode Page
+									a(href="#") Go to show page
+									a(href="#") Subscribe
+						button.show-summary-widget_toggle
+			div.show-summary_content
+				p A weekly show that shines a spotlight on the intersection of open source and software development. It's about the code, the people, and the community
+				cite Hosted by
+					a(href="#") Adam Stacoviak
+					a(href="#") Jerod Santo
+				p
+					b 208 Episodes
+		article.show-summary
+			div.show-summary_art
+				div.show-summary-widget.show-summary-widget--founders-talk
+					div.show-summary-widget_content
+						// For open state, use .show-summary-widget_menu--is-open
+						div.show-summary-widget_menu.show-summary-widget_menu--is-open
+							div.tooltip
+								h3.tooltip_heading The Changelog
+								nav.tooltip_links
+									h4.accessibility-hidden Podcast Menu
+									a(href="#") Play latest episode
+									a(href="#") Latest Episode Page
+									a(href="#") Go to show page
+									a(href="#") Subscribe
+						button.show-summary-widget_toggle
+			div.show-summary_content
+				p A weekly show that shines a spotlight on the intersection of open source and software development. It's about the code, the people, and the community
+				cite Hosted by
+					a(href="#") Adam Stacoviak
+					a(href="#") Jerod Santo
+				p
+					b 208 Episodes
+		article.show-summary
+			div.show-summary_art
+				div.show-summary-widget.show-summary-widget--go-time
+					div.show-summary-widget_content
+						// For open state, use .show-summary-widget_menu--is-open
+						div.show-summary-widget_menu
+							div.tooltip
+								h3.tooltip_heading The Changelog
+								nav.tooltip_links
+									h4.accessibility-hidden Podcast Menu
+									a(href="#") Play latest episode
+									a(href="#") Latest Episode Page
+									a(href="#") Go to show page
+									a(href="#") Subscribe
+						button.show-summary-widget_toggle
+			div.show-summary_content
+				p A weekly show that shines a spotlight on the intersection of open source and software development. It's about the code, the people, and the community
+				cite Hosted by
+					a(href="#") Adam Stacoviak
+					a(href="#") Jerod Santo
+				p
+					b 208 Episodes
+		article.show-summary
+			div.show-summary_art
+				div.show-summary-widget.show-summary-widget--polyglot
+					div.show-summary-widget_content
+						// For open state, use .show-summary-widget_menu--is-open
+						div.show-summary-widget_menu
+							div.tooltip
+								h3.tooltip_heading The Changelog
+								nav.tooltip_links
+									h4.accessibility-hidden Podcast Menu
+									a(href="#") Play latest episode
+									a(href="#") Latest Episode Page
+									a(href="#") Go to show page
+									a(href="#") Subscribe
+						button.show-summary-widget_toggle
+			div.show-summary_content
+				p A weekly show that shines a spotlight on the intersection of open source and software development. It's about the code, the people, and the community
+				cite Hosted by
+					a(href="#") Adam Stacoviak
+					a(href="#") Jerod Santo
+				p
+					b 208 Episodes
+		article.show-summary
+			div.show-summary_art
+				div.show-summary-widget.show-summary-widget--backstage
 					div.show-summary-widget_content
 						// For open state, use .show-summary-widget_menu--is-open
 						div.show-summary-widget_menu

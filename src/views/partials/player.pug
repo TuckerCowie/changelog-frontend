@@ -1,42 +1,43 @@
 div#player
+    // For open state, use .podcast-player--is-active
     figure.podcast-player
         div.podcast-player_details
-            img(src="http://placehold.it/72", alt="The Changelog Podcast")
+            img(src="img/the-changelog-cover-art.svg", alt="The Changelog Podcast")
             div.podcast-player_details_title
                 span Now Playing: <b>Changelog #201</b>
                 figcaption SQLite with Richard Hipp
 
             div.share-podcast
                 button.share-podcast_btn
-                    img(src="http://placehold.it/18", alt="Share episode")
+                    img(src="img/share.svg", alt="Share episode")
                     | Share
                 div.share-podcast_tooltip
                     div.share-podcast_tooltip_link
-                        img(src="http://placehold.it/16", alt="Episode link")
+                        img(src="img/podcast-link.svg", alt="Episode link")
                         span.share-podcast_tooltip_link_text http://changelog.com/podcasts/201
                     div.share-podcast_tooltip_options
                         input#start-at(type="checkbox")
                         label(for="start-at") Start at <b>46:53</b>?
                     nav.podcast-menu
                         a(href="#", target="_blank")
-                            img(src="http://placehold.it/24", alt="Tweet episode link on twitter")
+                            img(src="img/social-twitter.svg", alt="Tweet episode link on twitter")
                             | Tweet
                         a(href="#", target="_blank")
-                            img(src="http://placehold.it/24", alt="Post episode link on facebook")
+                            img(src="img/social-facebook.svg", alt="Post episode link on facebook")
                             | Post
 
         div.podcast-player_control
             div.podcast-player_control_buttons
                 button #200
-                    img(src="http://placehold.it/18", alt="Previous episode")/
+                    img(src="img/podcast-arrow.svg", alt="Previous episode")/
                 button
-                    img(src="http://placehold.it/36", alt="Previous episode")/
+                    img(src="img/podcast-previous-fifteen.svg", alt="Last 15")/
                 button
-                    img(src="http://placehold.it/54", alt="Previous episode")/
+                    img(src="img/play-large.svg", alt="Play")/
                 button
-                    img(src="http://placehold.it/36", alt="Previous episode")/
+                    img(src="img/podcast-next-fifteen.svg", alt="Next 15")/
                 button 
-                    img(src="http://placehold.it/18", alt="Previous episode")/
+                    img.flip-horizontal(src="img/podcast-arrow.svg", alt="Next episode")/
                     | #202
             form
                 div.range-slider

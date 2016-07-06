@@ -9,10 +9,10 @@
         height: 3rem
         display: flex
         justify-content: space-around
-        background-image: url(http://placehold.it/40)
+        background: url(img/more.svg) center center no-repeat
 
     &_menu--is-open + &_toggle
-        background-image: url(http://placehold.it/40)
+        background: url(img/close.svg) center center no-repeat
 
         @media (min-width: $tablet + 100)
             right: 50%
@@ -23,6 +23,21 @@
         background-image: url(http://placehold.it/350)
         background-size: cover
         background-position: center center
+
+    &--changelog &_content
+        background-image: url(img/the-changelog-cover-art.svg)
+
+    &--founders-talk &_content
+        background-image: url(img/founders-talk-cover-art.svg)
+
+    &--go-time &_content
+        background-image: url(img/go-time-cover-art.svg)
+
+    &--polyglot &_content
+        background-image: url(img/polyglot-cover-art.svg)
+
+    &--backstage &_content
+        background-image: url(img/backstage-cover-art.svg)
 
     &_menu
         display: none
