@@ -22,15 +22,15 @@ var dist = 'dist';
 gulp.task('default', ['sass', 'views', 'images', 'fonts']);
 
 gulp.task('clean', function cleanDist() {
-	del(dist + '/*.*');
+	return del(dist + '/*.*');
 });
 
 gulp.task('clean:images', function cleanDistImages() {
-	del(dist + '/img');
+	return del(dist + '/img');
 });
 
 gulp.task('clean:fonts', function cleanDistFonts() {
-	del(dist + '/fonts');
+	return del(dist + '/fonts');
 });
 
 gulp.task('watch', ['clean', 'default'], function liveReload() {
