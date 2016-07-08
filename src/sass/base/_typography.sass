@@ -1,7 +1,10 @@
 body
     font-size: $root-font-size
-    font-family: $content
+    font-family: $content-fallback
     color: $black
+
+    @media (min-width: $tablet)
+        font-family: $content
 
 a
     text-decoration: none
@@ -21,7 +24,6 @@ p, ul, ol
 
 q
     font-size: 1.7em
-    font-family: $content
     font-weight: 800
     text-align: center
 
@@ -53,8 +55,11 @@ q
 
 %display-font
     text-transform: uppercase
-    font-family: $display
     font-weight: 500
+    font-family: $display-fallback
+
+    @media (min-width: $tablet)
+        font-family: $display
 
 .h2
     text-align: center
