@@ -4,20 +4,23 @@ var del = require('del');
 var gulp = require('gulp');
 var livereload = require('gulp-livereload');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var pug = require('gulp-pug');
 var imagemin = require('gulp-imagemin');
 var fontmin = require('gulp-fontmin');
+var wiredep = require('wiredep').stream;
+
+var dist = 'dist';
 
 var sources = {
+	html: dist + '/**/*.html',
 	views: ['src/views/**/*.pug', '!src/views/{partials,templates}/*.pug'],
 	pug: ['src/views/**/*.pug'],
 	sass: 'src/sass/**/*.sass',
 	images: 'assets/img/**/*.{svg,png,jpg}',
 	fonts: 'assets/fonts/**/*.ttf',
 };
-
-var dist = 'dist';
 
 gulp.task('default', ['sass', 'views', 'images', 'fonts']);
 
@@ -53,6 +56,7 @@ gulp.task('sass', function buildCSS() {
 	gulp.src(sources.sass)
 	.pipe(sourcemaps.init())
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+		.pipe(autoprefixer({browsers: 'last 3 versions'}))
 	.pipe(sourcemaps.write('./'))
 	.pipe(gulp.dest(dist))
 	.pipe(livereload());
@@ -68,4 +72,10 @@ gulp.task('fonts', ['clean:fonts'], function compressFonts() {
 	gulp.src(sources.fonts)
 	.pipe(fontmin())
 	.pipe(gulp.dest(dist + '/fonts'));
+});
+
+gulp.task('bower', ['views'], function addBowerDependencies() {
+	return gulp.src(sources.html)
+    .pipe(wiredep())
+    .pipe(gulp.dest(dist));
 });

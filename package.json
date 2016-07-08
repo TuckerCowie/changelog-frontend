@@ -5,9 +5,9 @@
   "main": "index.html",
   "scripts": {
     "build": "gulp",
-    "postinstall": "npm run build",
+    "postinstall": "node_modules/.bin/bower install && npm run build",
     "start": "gulp watch",
-    "deploy": "npm run build && rsync -arvuz dist/ jerodsanto@159.203.131.79:~/peek"
+    "deploy": "npm run build && rsync -arvuz dist/ jerodsanto@159.203.131.79:~/peek && rsync -arvuz bower_components/ jerodsanto@159.203.131.79:~/peek/bower_components"
   },
   "repository": {
     "type": "git",
@@ -17,15 +17,16 @@
   "license": "ISC",
   "devDependencies": {
     "del": "^2.2.1",
+    "bower": "^1.7.9",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-fontmin": "^0.7.4",
     "gulp-imagemin": "^3.0.1",
     "gulp-livereload": "^3.8.1",
     "gulp-pug": "^3.0.3",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0"
+    "wiredep": "^4.0.0"
   },
-  "dependencies": {
-    "normalize-scss": "^5.0.3"
-  }
+  "dependencies": {}
 }

@@ -1,0 +1,22 @@
+{
+  "name": "changelog-frontend",
+  "description": "",
+  "main": "src/views/templates/wrapper.pug",
+  "authors": [
+    "Tucker Cowie <tuckercowie@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/TuckerCowie/changelog-frontend",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.2.0",
+    "popper.js": "^0.5.1"
+  }
+}
