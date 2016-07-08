@@ -1,6 +1,6 @@
 'use strict';
 
-var del = require('del');
+var rm = require('gulp-rimraf');
 var gulp = require('gulp');
 var livereload = require('gulp-livereload');
 var sass = require('gulp-sass');
@@ -9,6 +9,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var pug = require('gulp-pug');
 var imagemin = require('gulp-imagemin');
 var fontmin = require('gulp-fontmin');
+var ttf2woff2 = require('gulp-ttf2woff2');
 var wiredep = require('wiredep').stream;
 
 var dist = 'dist';
@@ -22,19 +23,7 @@ var sources = {
 	fonts: 'assets/fonts/**/*.ttf',
 };
 
-gulp.task('default', ['sass', 'views', 'images', 'fonts']);
-
-gulp.task('clean', function cleanDist() {
-	return del(dist + '/*.*');
-});
-
-gulp.task('clean:images', function cleanDistImages() {
-	return del(dist + '/img');
-});
-
-gulp.task('clean:fonts', function cleanDistFonts() {
-	return del(dist + '/fonts');
-});
+gulp.task('default', ['views', 'bower', 'sass', 'images', 'fonts']);
 
 gulp.task('watch', ['clean', 'default'], function liveReload() {
 	livereload.listen();
@@ -43,8 +32,12 @@ gulp.task('watch', ['clean', 'default'], function liveReload() {
 	gulp.src(dist + '/index.html');
 });
 
+gulp.task('clean', function cleanDist() {
+	return gulp.src(dist + '/*.*').pipe(rm());
+});
+
 gulp.task('views', function buildHTML() {
-	gulp.src(sources.views)
+	return gulp.src(sources.views)
 	.pipe(pug({
 		pretty: true,
 	}))
@@ -62,15 +55,24 @@ gulp.task('sass', function buildCSS() {
 	.pipe(livereload());
 });
 
+gulp.task('clean:images', function cleanDistImages() {
+	return gulp.src(dist + '/img').pipe(rm());
+});
+
 gulp.task('images', ['clean:images'], function compressImages() {
 	gulp.src(sources.images)
 	.pipe(imagemin())
 	.pipe(gulp.dest(dist + '/img'));
 });
 
+gulp.task('clean:fonts', function cleanDistFonts() {
+	return gulp.src(dist + '/fonts').pipe(rm());
+});
+
 gulp.task('fonts', ['clean:fonts'], function compressFonts() {
 	gulp.src(sources.fonts)
-	.pipe(fontmin())
+	.pipe(fontmin({hinting: false}))
+	.pipe(ttf2woff2({clone: true}))
 	.pipe(gulp.dest(dist + '/fonts'));
 });
 
