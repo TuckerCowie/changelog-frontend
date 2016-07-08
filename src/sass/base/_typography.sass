@@ -12,6 +12,10 @@ a
     & > img
         max-height: 100% 
 
+b
+    font-weight: 900
+    color: $black
+
 p, ul, ol
     color: $half-black
 
@@ -24,7 +28,7 @@ p, ul, ol
 
 q
     font-size: 1.7em
-    font-weight: 800
+    font-weight: 900
     text-align: center
 
     &:before
@@ -36,7 +40,7 @@ q
     & + cite
         font-size: 1em
         display: block
-        font-weight: 600
+        font-weight: 500
         font-style: normal
         line-height: 2
         margin-top: 1rem
@@ -45,7 +49,6 @@ q
             margin-top: 0
 
         & > sup
-            font-weight: 400
             font-style: italic
             display: block
             top: 0
@@ -55,7 +58,7 @@ q
 
 %display-font
     text-transform: uppercase
-    font-weight: 500
+    font-weight: 400
     font-family: $display-fallback
 
     @media (min-width: $tablet)
