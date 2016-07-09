@@ -27,7 +27,7 @@ gulp.task('default', ['views', 'bower', 'sass', 'images', 'fonts']);
 
 gulp.task('watch', ['clean', 'default'], function liveReload() {
 	livereload.listen();
-	gulp.watch(sources.pug, ['views']);
+	gulp.watch(sources.pug, ['bower']);
 	gulp.watch(sources.sass, ['sass']);
 	gulp.src(dist + '/index.html');
 });
