@@ -1,45 +1,47 @@
 div#player
     // For open state, use .podcast-player--is-active
-    figure.podcast-player
+    figure.podcast-player.podcast-player--is-active
+        img.podcast-player_art(src="img/the-changelog-cover-art.svg", alt="The Changelog Podcast")
         div.podcast-player_details
-            img(src="img/the-changelog-cover-art.svg", alt="The Changelog Podcast")
             div.podcast-player_details_title
                 span Now Playing: <b>Changelog #201</b>
                 figcaption SQLite with Richard Hipp
-
-            div.share-podcast
-                button.share-podcast_btn
-                    img(src="img/share.svg", alt="Share episode")
-                    | Share
-                div.share-podcast_tooltip
-                    div.share-podcast_tooltip_link
-                        img(src="img/podcast-link.svg", alt="Episode link")
-                        span.share-podcast_tooltip_link_text http://changelog.com/podcasts/201
-                    div.share-podcast_tooltip_options
-                        input#start-at(type="checkbox")
-                        label(for="start-at") Start at <b>46:53</b>?
-                    nav.podcast-menu
-                        a(href="#", target="_blank")
-                            img(src="img/social-twitter.svg", alt="Tweet episode link on twitter")
-                            | Tweet
-                        a(href="#", target="_blank")
-                            img(src="img/social-facebook.svg", alt="Post episode link on facebook")
-                            | Post
-
-        div.podcast-player_control
-            div.podcast-player_control_buttons
-                button #200
-                    img(src="img/podcast-arrow.svg", alt="Previous episode")/
-                button
-                    img(src="img/podcast-previous-fifteen.svg", alt="Last 15")/
-                button
-                    img(src="img/play-large.svg", alt="Play")/
-                button
-                    img(src="img/podcast-next-fifteen.svg", alt="Next 15")/
-                button 
-                    img.flip-horizontal(src="img/podcast-arrow.svg", alt="Next episode")/
-                    | #202
-            form
-                div.range-slider
-                    input.range-slider_range(type="range", value="250", min="0", max="500", onChange=".range-slider_output.value=value")
-                    output.range-slider_output <b>43:57</b> / 1:03:32
+            div.podcast-player_details_share
+                div.share-podcast
+                    button.share-podcast_btn
+                        img(src="img/share.svg", alt="Share episode")
+                        | Share
+                    // For open state, use .share-podcast_tooltip--is-open
+                    div.share-podcast_tooltip
+                        div.share-podcast_tooltip_link
+                            img(src="img/podcast-link.svg", alt="Episode link")
+                            span.share-podcast_tooltip_link_text http://changelog.com/podcasts/201
+                        div.share-podcast_tooltip_options
+                            input#start-at(type="checkbox")
+                            label(for="start-at") Start at <b>46:53</b>?
+                        nav.podcast-menu
+                            a(href="#", target="_blank")
+                                img(src="img/social-twitter.svg", alt="Tweet episode link on twitter")
+                                | Tweet
+                            a(href="#", target="_blank")
+                                img(src="img/social-facebook.svg", alt="Post episode link on facebook")
+                                | Post
+        div.podcast-player_buttons
+            button.podcast-player-button.podcast-player-button--episode #200
+                img(src="img/podcast-arrow.svg", alt="Previous episode")/
+            button.podcast-player-button.podcast-player-button--transport
+                img(src="img/podcast-previous-fifteen.svg", alt="Last 15")/
+            button.podcast-player-button.podcast-player-button--play
+                img(src="img/play-large.svg", alt="Play")/
+            button.podcast-player-button.podcast-player-button--transport
+                img(src="img/podcast-next-fifteen.svg", alt="Next 15")/
+            button.podcast-player-button.podcast-player-button--episode.podcast-player-button--is-active
+                img.flip-horizontal(src="img/podcast-arrow.svg", alt="Next episode")/
+                | #202
+        form.podcast-player_slider
+            div.range-slider
+                span.range-slider_above Now playing: Changelog #201
+                input.range-slider_range(type="range", value="250", min="0", max="500", onChange=".range-slider_output.value=value")
+                span.range-slider_below 
+                    span SQLite with Richard Hipp
+                    output <b>43:57</b> / 1:03:32

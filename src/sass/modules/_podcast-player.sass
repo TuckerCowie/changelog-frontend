@@ -3,22 +3,33 @@
     color: $white
     margin: 0
     background: rgba($black, 0.9)
+    flex-wrap: wrap
+    
+    @media (min-width: $tablet)
+        flex-wrap: nowrap
+        align-items: center
 
     &--is-active
-        display: block
+        display: flex
 
-        @media (min-width: $tablet)
-            display: flex
+    &_art
+        display: none
+        max-height: 5rem
+        max-width: 5rem
 
-    button
-        @extend %display-font
-        font-size: 1.15em
+        @media (min-width: 415px)
+            display: block
 
     &_details
+        background: rgba($black, 0.5)
         display: flex
+        flex: 1 1 auto
         justify-content: space-between
-        align-items: center
-        background: rgba($black, 0.5) 
+
+        @media (min-width: $tablet)
+            background: none
+            flex: 0 0 auto
+            order: 4
 
         &_title
             flex: 1 1 auto
@@ -46,30 +57,26 @@
                 font-weight: 500
                 font-size: 1.25em
 
-    &_control
-        padding: 1rem
+        &_share 
+            flex: 0 1 auto
+
+    &_buttons
+        width: 100%
+        padding: 1rem 0
+        display: flex
+        flex: 1 0 auto
+        justify-content: center
+        align-items: center
 
         @media (min-width: $tablet)
+            width: auto
             padding: 0 1rem
-            display: flex
-            flex: 1 1 auto
-            align-items: center
+            flex: 0 0 auto
 
-        & > form 
-            flex: 1 1 auto
+    &_slider
+        padding: 0 1rem 1rem 1rem
+        flex: 1 0 auto
 
-        &_buttons
-            display: flex
-            justify-content: center
-            align-items: center
-
-            & > button
-                color: $white
-                padding: 1rem
-
-                & > img
-                    height: 3.85rem
-                    width: 3.85rem
-
-                @media (min-width: $tablet)
-                    padding: 0 1rem
+        @media (min-width: $tablet)
+            width: auto
+            padding: 0 1rem

@@ -13,7 +13,10 @@ $range-label-width: 60px !default
 .range-slider
     margin: 0
     width: $range-width
-    text-align: right
+
+    @media (min-width: $tablet)
+        display: flex;
+        flex-direction: column;
 
     &_range
         position: relative
@@ -24,7 +27,7 @@ $range-label-width: 60px !default
         background: $range-track-color
         outline: none
         padding: 0
-        margin: 0
+        margin: 0.5rem 0
 
         &:after
             content: ''
@@ -67,5 +70,33 @@ $range-label-width: 60px !default
     &:active::-moz-range-thumb
         background: $range-handle-color-hover
 
-    &_output > b
+    &_above
+        display: none
         color: $green
+        @extend %display-font
+
+        @media (min-width: $tablet)
+            display: inline
+
+    &_below
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        & > span
+            display: none
+            font-size: 1.15em
+            font-weight: 900
+
+            @media (min-width: $tablet)
+                display: inline
+
+        & > output
+            margin-left: auto
+            text-align: right
+            color: $half-white
+            font-size: 0.75em
+
+            & > b
+                color: $green
+                font-weight: 400
