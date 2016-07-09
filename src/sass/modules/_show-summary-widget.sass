@@ -1,25 +1,24 @@
 .show-summary-widget
     +aspect-ratio(1, 1, 'content')
-    
+
     &_toggle
+        display: none
         position: absolute
         right: 1rem
         bottom: 0.5rem
         width: 2rem
         height: 2rem
-        display: flex
         justify-content: space-around
         background: url(img/more.svg) center center no-repeat
+
+    &:hover &_toggle, &_menu--is-open + &_toggle
+        @media (min-width: $tablet + 100)
+            display: flex
 
     &_menu--is-open + &_toggle
         height: 1.15rem
         width: 1.15rem
         background: url(img/close.svg) center center no-repeat
-
-        @media (min-width: $tablet + 100)
-            right: 50%
-            margin-right: -0.575rem
-
 
     &_content
         background-size: cover
@@ -52,4 +51,5 @@
         right: 0
 
         &--is-open
-            display: flex
+            @media (min-width: $tablet + 100)
+                display: flex
