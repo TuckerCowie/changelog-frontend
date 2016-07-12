@@ -10,6 +10,8 @@ var pug = require('gulp-pug');
 var imagemin = require('gulp-imagemin');
 var fontmin = require('gulp-fontmin');
 var ttf2woff2 = require('gulp-ttf2woff2');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 var wiredep = require('wiredep').stream;
 
 var dist = 'dist';
@@ -21,14 +23,16 @@ var sources = {
 	sass: 'src/sass/**/*.sass',
 	images: 'assets/img/**/*.{svg,png,jpg}',
 	fonts: 'assets/fonts/**/*.ttf',
+	js: 'src/js/**/*.js',
 };
 
-gulp.task('default', ['views', 'bower', 'sass', 'images', 'fonts']);
+gulp.task('default', ['javascript', 'views', 'bower', 'sass', 'images', 'fonts']);
 
-gulp.task('watch', ['clean', 'default'], function liveReload() {
+gulp.task('watch', ['default'], function liveReload() {
 	livereload.listen();
 	gulp.watch(sources.pug, ['bower']);
 	gulp.watch(sources.sass, ['sass']);
+	gulp.watch(sources.js, ['javascript']);
 	gulp.src(dist + '/index.html');
 });
 
@@ -80,4 +84,14 @@ gulp.task('bower', ['views'], function addBowerDependencies() {
 	return gulp.src(sources.html)
     .pipe(wiredep())
     .pipe(gulp.dest(dist));
+});
+
+gulp.task('javascript', function concatJavascript() {
+	return gulp.src(sources.js)
+	.pipe(sourcemaps.init())
+		.pipe(concat('app.js'))
+		.pipe(uglify())
+	.pipe(sourcemaps.write('./'))
+	.pipe(gulp.dest(dist))
+	.pipe(livereload());
 });

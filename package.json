@@ -19,6 +19,7 @@
     "bower": "^1.7.9",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
     "gulp-fontmin": "^0.7.4",
     "gulp-imagemin": "^3.0.1",
     "gulp-livereload": "^3.8.1",
@@ -27,6 +28,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-ttf2woff2": "^2.0.2",
+    "gulp-uglify": "^1.5.4",
     "wiredep": "^4.0.0"
   },
   "dependencies": {}
