@@ -26,8 +26,9 @@ block content
 					a(href="#")
 						img(src="img/sponsor.svg", alt="Sponsor podcast graphic")/
 						| Sponsor
-					button
+					button.podcast-menu_more-button
 						img(src="img/more.svg", alt="More podcast options graphic")/
+				div.podcast-menu-tooltip Hello tooltip
 				div.show-header_hosts
 					i This show records on Wednesday and airs on Friday with hosts:
 					div.hosts-list.section
@@ -73,17 +74,15 @@ block content
 						a(href="#")
 							img(src="img/details.svg", alt="View details")/
 							| Details
-						button
+						button.podcast-menu_more-button
 							img(src="img/more.svg", alt="More options")/
-						// For open state, use .podcast-menu_tooltip--is-open
-						div.podcast-menu_tooltip
-							nav.tooltip.tooltip--has-carret
-								h5.accessibility-hidden More Episode Navigation Options
-								div.tooltip_links
-									a(href="#") Subscribe
-									a(href="#") Share episode
-									button Copy episode link
-									a(href="#") Sponsor this podcast
+					nav.podcast-menu-tooltip.tooltip
+						h5.accessibility-hidden More Episode Navigation Options
+						div.tooltip_links
+							a(href="#") Subscribe
+							a(href="#") Share episode
+							button Copy episode link
+							a(href="#") Sponsor this podcast
 			article.episode-summary
 				time.episode-summary_date(datetime="2016-05-16T12:00") May 6 2016
 				h3.episode-summary_title
@@ -101,8 +100,15 @@ block content
 						a(href="#")
 							img(src="img/details.svg", alt="View details")/
 							| Details
-						button
+						button.podcast-menu_more-button
 							img(src="img/more.svg", alt="More options")/
+					nav.podcast-menu-tooltip.tooltip
+						h5.accessibility-hidden More Episode Navigation Options
+						div.tooltip_links
+							a(href="#") Subscribe
+							a(href="#") Share episode
+							button Copy episode link
+							a(href="#") Sponsor this podcast
 		div.container.section
 			div.mosiac.mosiac--blue
 				aside.callout.callout--large
@@ -130,8 +136,15 @@ block content
 							a(href="#")
 								img(src="img/details.svg", alt="View details")/
 								| Details
-							button
+							button.podcast-menu_more-button
 								img(src="img/more.svg", alt="More options")/
+						nav.podcast-menu-tooltip.tooltip
+							h5.accessibility-hidden More Episode Navigation Options
+							div.tooltip_links
+								a(href="#") Subscribe
+								a(href="#") Share episode
+								button Copy episode link
+								a(href="#") Sponsor this podcast
 			div.btn-container
 				button.btn.btn--block
 					img(src="img/arrow-down.svg", alt="Show all episodes")/

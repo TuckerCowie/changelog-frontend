@@ -11,21 +11,6 @@ div#player
                     button.share-podcast_btn
                         img(src="img/share.svg", alt="Share episode")
                         | Share
-                    // For open state, use .share-podcast_tooltip--is-open
-                    div.share-podcast_tooltip
-                        div.share-podcast_tooltip_link
-                            img(src="img/podcast-link.svg", alt="Episode link")
-                            span.share-podcast_tooltip_link_text http://changelog.com/podcasts/201
-                        div.share-podcast_tooltip_options
-                            input#start-at(type="checkbox")
-                            label(for="start-at") Start at <b>46:53</b>?
-                        nav.podcast-menu
-                            a(href="#", target="_blank")
-                                img(src="img/social-twitter.svg", alt="Tweet episode link on twitter")
-                                | Tweet
-                            a(href="#", target="_blank")
-                                img(src="img/social-facebook.svg", alt="Post episode link on facebook")
-                                | Post
         div.podcast-player_buttons
             button.podcast-player-button.podcast-player-button--episode #200
                 img(src="img/podcast-arrow.svg", alt="Previous episode")/
@@ -45,3 +30,17 @@ div#player
                 span.range-slider_below 
                     span SQLite with Richard Hipp
                     output <b>43:57</b> / 1:03:32
+    div.share-podcast-tooltip
+        div.share-podcast-tooltip_link
+            img(src="img/podcast-link.svg", alt="Episode link")
+            span.share-podcast-tooltip_link_text http://changelog.com/podcasts/201
+        div.share-podcast-tooltip_options
+            input#start-at(type="checkbox")
+            label(for="start-at") Start at <b>46:53</b>?
+        nav.podcast-menu
+            a(href="#", target="_blank")
+                img(src="img/social-twitter.svg", alt="Tweet episode link on twitter")
+                | Tweet
+            a(href="#", target="_blank")
+                img(src="img/social-facebook.svg", alt="Post episode link on facebook")
+                | Post
